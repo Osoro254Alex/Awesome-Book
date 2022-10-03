@@ -1,5 +1,5 @@
 import { DateTime } from './luxon.js';
-
+// Function to handle datetime
 const getDate = () => {
   const time = document.querySelector('.time');
   const now = DateTime.now();

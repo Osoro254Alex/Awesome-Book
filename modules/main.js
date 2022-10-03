@@ -8,8 +8,6 @@ books.AppendBook();
 
 books.removeButton();
 
-books.displayBooks();
-
 getDate();
 
 navLinks();

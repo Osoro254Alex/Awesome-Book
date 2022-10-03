@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 // BookListApp class: class to hold books
 export default class BookListApp {
   constructor() {
@@ -32,15 +30,10 @@ export default class BookListApp {
       this.addBookToList({ title, author });
       this.bookList.push({ title, author });
       localStorage.setItem('books', JSON.stringify(this.bookList));
-      this.clearFields();
+      // Clear form input's values
+      document.querySelector('.title').value = '';
+      document.querySelector('.author').value = '';
     });
-  }
-
-  // function to remove book
-  removeBook(el) {
-    if (el.classList.contains('remove-btn')) {
-      el.parentElement.parentElement.remove();
-    }
   }
 
   // Function to perform the following actions:
@@ -53,7 +46,7 @@ export default class BookListApp {
   deleteBook() {
     const books = this.bookList;
     books.forEach((book, index) => {
-        books.splice(index, 1);
+      books.splice(index, 1);
     });
     localStorage.setItem('books', JSON.stringify(books));
   }
@@ -62,7 +55,9 @@ export default class BookListApp {
   removeButton() {
     this.container.addEventListener('click', (e) => {
       // delete elements from screen
-      this.removeBook(e.target);
+      if (e.target.classList.contains('remove-btn')) {
+        e.target.parentElement.parentElement.remove();
+      }
       // remove book from local storage
       this.deleteBook();
     });
@@ -74,16 +69,5 @@ export default class BookListApp {
     books.forEach((book) => this.addBookToList(book));
   }
 
-  // Clear form input's values
-  clearFields() {
-    document.querySelector('.title').value = '';
-    document.querySelector('.author').value = '';
-  }
   // Function to handle datetime
-
-
 }
-
-
-
-
