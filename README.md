@@ -11,7 +11,7 @@
 
 ## Link to the live page
 
-<!-- > Feel free to check the [Awesome-Book-link](). -->
+> Feel free to check the [Awesome-Book-link](https://osoro254alex.github.io/Awesome-Book/).
 
 ## Getting Started
 
