@@ -6,12 +6,9 @@
 
 > In this project, I will restructure my Awesome books app code. The goal is to make it more organized by using modules. I will also practice the ES6 syntax that I have learned.
 
-# Project Screenshot image
-![](./images/127.0.0.1_5500_.png)
-
 ## Link to the live page
 
-<!-- > Feel free to check the [Awesome-Book-link](). -->
+> Feel free to check the [Awesome-Book-link](https://osoro254alex.github.io/Awesome-Book/).
 
 ## Getting Started
 
