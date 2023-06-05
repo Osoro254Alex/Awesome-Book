@@ -45,10 +45,10 @@ export default class BookListApp {
 
   deleteBook() {
     const books = this.bookList;
-    books.forEach((book, index) => {
-      books.splice(index, 1);
-    });
-    localStorage.setItem('books', JSON.stringify(books));
+    const updatedBooks = books.filter((book, index) => !books[index]);
+
+    this.bookList = updatedBooks; // Update the bookList array
+    localStorage.setItem('books', JSON.stringify(updatedBooks)); // Update local storage
   }
 
   // Function to remove books when 'remove" button clicked
@@ -66,7 +66,9 @@ export default class BookListApp {
   // get book from local storage
   displayBooks() {
     const books = JSON.parse(localStorage.getItem('books'));
-    books.forEach((book) => this.addBookToList(book));
+    if (books) {
+      books.forEach((book) => this.addBookToList(book));
+    }
   }
 
   // Function to handle datetime
